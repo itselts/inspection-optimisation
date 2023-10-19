@@ -1,0 +1,15 @@
+pandas
+openpyxl
+requests
+matplotlib
+toml
+pyarrow
+python-dotenv
+geopandas
+folium
+geopandas
+
+azure-storage-file-datalake
+azure-storage-blob
+azure-identity
+azure-keyvault
