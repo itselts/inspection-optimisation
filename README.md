@@ -64,18 +64,18 @@ If ran locally, it will attempt to access:
 
 #### Normal optimisation example
 ~~~
-python execute.py --contract_ID VRMC_OPS --request_ID EF4DD65B-B09B-47DB-ABF4-2EB8D9B2A211
+python execute.py --contract_ID VRMC_OPS --request_ID 7B81F1F2-2BB6-45EA-BA70-DD823385BD0A
 ~~~
-- 218 inspection segments
-- 701 jobs
+- 203 inspection segments
+- 762 jobs
 - 2 depots
 - 2 crews
 
 #### Warm start optimisation example
 ~~~
-python execute_ws.py --contract_ID VRMC_OPS --request_ID 49D373B1-819F-407B-B2F7-2A4063A86078
+python execute_ws.py --contract_ID VRMC_OPS --request_ID B6EDB008-8717-4988-8AD9-DE9C8BB43B2A
 ~~~
-- Wangaratta depot with 187 inspection segments
+- Wodonga depot with 105 inspection segments
 
 ## Future improvements (From easiest to hardest)
 - Improve the scoring function. Currently, a majority of jobs have a score of 50. Possibly need a steeper gradient too.
