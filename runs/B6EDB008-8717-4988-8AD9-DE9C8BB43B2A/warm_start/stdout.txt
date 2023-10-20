@@ -1,0 +1,87 @@
+          OPTIMISATION DETAILS
+Optimisation run on 2023-10-17. 
+OptRunID: B6EDB008-8717-4988-8AD9-DE9C8BB43B2A
+ContractID: VRMC_OPS
+----------------------------------------
+    Creating plot for this run ID...    
+105 inspection segments for Wodonga
+Geographical plot complete.
+Preprocessing complete.
+
+Booting Julia...
+----------------------------------------
+  Activating project at `C:\Users\Elton.Shi\Desktop\GitHub\itselts\inspection-optimisation\src`
+Ingesting and transforming data...ok
+Set parameter CloudAccessID
+Set parameter CloudSecretKey
+Set parameter CloudPool to value "941037-rdnadevpool"
+Set parameter CSAppName to value "RDnA_optimisation_dev"
+Set parameter LicenseID to value 941037
+Waiting for cloud server to start (pool 941037-rdnadevpool)...
+Starting...
+Starting...
+Compute Server job ID: 1dd23bfd-643c-43a5-ad1c-9816dd037386
+Capacity available on '941037-rdnadevpool' cloud pool - connecting...
+Established HTTPS encrypted connection
+Creating the model...ok
+Set parameter TimeLimit to value 330
+Set parameter MIPFocus to value 1
+Set parameter MIPFocus to value 1
+Set parameter TimeLimit to value 330
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (win64)
+Gurobi Compute Server Worker version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 16 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 45755 rows, 44941 columns and 349266 nonzeros
+Model fingerprint: 0xa56e4c7c
+Variable types: 210 continuous, 44731 integer (44731 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 9e+02]
+  Objective range  [1e+00, 5e+05]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 9e+02]
+Presolve removed 34413 rows and 33706 columns
+Presolve time: 0.20s
+Presolved: 11342 rows, 11235 columns, 55440 nonzeros
+Variable types: 105 continuous, 11130 integer (11130 binary)
+
+Root relaxation: objective 5.147137e+03, 297 iterations, 0.02 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 5147.13728    0   14          - 5147.13728      -     -    0s
+H    0     0                    12211.100000 5147.13728  57.8%     -    0s
+     0     0 5150.60000    0   22 12211.1000 5150.60000  57.8%     -    0s
+H    0     0                    5319.1000000 5150.60000  3.17%     -    1s
+H    0     0                    5154.1000000 5150.60000  0.07%     -    1s
+     0     0 5150.60000    0   24 5154.10000 5150.60000  0.07%     -    1s
+     0     0 infeasible    0      5154.10000 5154.10000  0.00%     -    1s
+
+Cutting planes:
+  Learned: 1
+  Implied bound: 2
+  MIR: 3
+  RLT: 7
+
+Explored 1 nodes (436 simplex iterations) in 1.31 seconds (1.28 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 3: 5154.1 5319.1 12211.1
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.154100000000e+03, best bound 5.154100000000e+03, gap 0.0000%
+
+User-callback calls 54, time in user-callback 0.01 sec
+OptRunOutput table created successfully.
+All results files created and saved successfully.
+
+Compute Server communication statistics:
+  Sent: 1.526 MB in 19 msgs and 2.94s (0.52 MB/s)
+  Received: 0.074 MB in 15 msgs and 1.90s (0.04 MB/s)
+
+----------------------------------------
+       Creating solutions plot...       
+Solutions plot complete.

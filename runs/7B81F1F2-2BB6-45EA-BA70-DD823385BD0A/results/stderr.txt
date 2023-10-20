@@ -1,0 +1,22 @@
+ERROR: IOError: stat("/home/rdna/.julia/registries/General/Registry.toml"): permission denied (EACCES)
+Stacktrace:
+  [1] uv_error
+    @ ./libuv.jl:97 [inlined]
+  [2] stat(path::String)
+    @ Base.Filesystem ./stat.jl:152
+  [3] isfile
+    @ ./stat.jl:456 [inlined]
+  [4] reachable_registries(; depots::Vector{String})
+    @ Pkg.Registry /opt/julia/share/julia/stdlib/v1.8/Pkg/src/Registry/registry_instance.jl:370
+  [5] reachable_registries
+    @ /opt/julia/share/julia/stdlib/v1.8/Pkg/src/Registry/registry_instance.jl:341 [inlined]
+  [6] Pkg.Types.Context()
+    @ Pkg.Types ./util.jl:493
+  [7] _activate_dep(dep_name::String)
+    @ Pkg.API /opt/julia/share/julia/stdlib/v1.8/Pkg/src/API.jl:1639
+  [8] activate(path::String; shared::Bool, temp::Bool, io::IOStream)
+    @ Pkg.API /opt/julia/share/julia/stdlib/v1.8/Pkg/src/API.jl:1662
+  [9] activate(path::String)
+    @ Pkg.API /opt/julia/share/julia/stdlib/v1.8/Pkg/src/API.jl:1652
+ [10] top-level scope
+    @ none:1
