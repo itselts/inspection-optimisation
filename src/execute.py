@@ -115,17 +115,10 @@ if __name__ == '__main__':
     # read config file
     config = read_config()
     
-    if socket.gethostname().startswith("DOW"): # If on Downer computer
-        python_exe = config['binary_paths']['python'] # Project specific Python 
-        if python_exe == "INPUT_PATH_TO_PYTHON_EXECUTABLE":
-            print("\nA virtual environment Python executable path has not been specified in config.toml.\n")
-        julia_exe = "julia"
-    else: # If on Batch
-        python_exe = "python" 
-        julia_exe = "julia"
-
-    # load env variables
-    load_env_var()
+    python_exe = config['binary_paths']['python'] # Project specific Python 
+    if python_exe == "INPUT_PATH_TO_PYTHON_EXECUTABLE":
+        print("\nA virtual environment Python executable path has not been specified in config.toml.\n")
+    julia_exe = "julia"
     
     # get cmd args
     args = build_cmd_args()
@@ -133,7 +126,7 @@ if __name__ == '__main__':
     request_ID = args.request_ID
 
     # extract the GetOptimiseInputItems, GetOptimiseInputCrews, DomainValueDepot and the start datetime
-    s_date_str, s_time_str = extract(contract_ID, request_ID)
+    s_date_str, s_time_str = "2023-10-17", "00:00"
 
     print(f"{'OPTIMISATION DETAILS' : ^40}")
     print(f"Optimisation run on {s_date_str}. \nOptRunID: {request_ID} \nContractID: {contract_ID}")
@@ -143,7 +136,7 @@ if __name__ == '__main__':
     print('\nBooting Julia...')
     subprocess.run([julia_exe, "optimise.jl", "--request_ID", f"{request_ID}", "--s_date", f"{s_date_str}", '--s_time', f'{s_time_str}'])
     subprocess.run([python_exe, "plot_solution.py", "--request_ID", f"{request_ID}"]) #, "--s_date", f"{s_date_str}", '--s_time', f'{s_time_str}'])
-    subprocess.run([python_exe, "load.py", "--request_ID", f"{request_ID}", "--contract_ID", f"{contract_ID}"])    
+    # subprocess.run([python_exe, "load.py", "--request_ID", f"{request_ID}", "--contract_ID", f"{contract_ID}"])    
 
     # Save subprocess outputs to separate txt file if on Batch
     if not socket.gethostname().startswith("DOW"):
