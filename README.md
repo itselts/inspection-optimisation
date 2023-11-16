@@ -1,7 +1,7 @@
 # Automation and optimisation of road network maintenance
 An automated decision support tool that optimizes the scheduling and routing of road network maintenance. It takes in both routine inspections as well as point defects. The underlying model is a mixed integer linear program created in Julia's JuMP library, and is solved using Gurobi. The model formulation is in the /docs directory, and can be classified as a capacitated, windy, multi-depot, genenral routing problem. Developed by Elton Shi and David Ming, the first version was released in February 2023.
 
-![alt text](https://github.com/itselts/inspection-optimisation/tree/main/runs/7B81F1F2-2BB6-45EA-BA70-DD823385BD0A/results?raw=true)
+![alt text](https://github.com/itselts/inspection-optimisation/blob/main/runs/7B81F1F2-2BB6-45EA-BA70-DD823385BD0A/results/Screenshot%202023-11-16%20180708.png?raw=true)
 
 ## Model features
 - Multi-depot
